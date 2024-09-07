@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="#">Movies Site</a>
+        <div class="search-container">
+            <form role="search" id="form">
+                <input type="search" id="query" name="q" placeholder="Search..">
+            </form>
+        </div>
+    </div>
+
+    <section id="section">
+        <!-- Movie cards will be injected here -->
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // JavaScript for scroll effect
+        const topnav = document.querySelector('.topnav');
+
+        function handleScroll() {
+            if (window.scrollY > 50) {
+                topnav.classList.add('scrolled');
+            } else {
+                topnav.classList.remove('scrolled');
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Initial check
+    </script>
+</body>
+
+</html>

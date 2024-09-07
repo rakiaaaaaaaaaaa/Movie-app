@@ -1,0 +1,189 @@
+/* Reset box-sizing for all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Basic body styles */
+body {
+    background-color: #121212;
+    /* Dark background for a sleek look */
+    color: #e0e0e0;
+    /* Light text color for contrast */
+    font-family: 'Roboto', sans-serif;
+    padding-top: 60px;
+    /* Space for fixed navigation */
+}
+
+/* Navigation bar styles */
+/* Base styles for the navigation bar */
+.topnav {
+    position: fixed;
+    /* Fix the menu to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f1f1f;
+    /* Initial background color */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    /* Ensure it’s above other content */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transitions */
+}
+
+/* Styles when scrolling */
+.topnav.scrolled {
+    background-color: #000000;
+    /* Change to a different color on scroll */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    /* Enhanced shadow */
+}
+
+.topnav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /* Smooth color transition */
+}
+
+.topnav a:hover {
+    color: #00bcd4;
+    /* Accent color on hover */
+}
+
+/* Other styles... */
+
+.search-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+form {
+    background-color: #2c2c2c;
+    /* Slightly lighter than the nav */
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: width 0.4s ease;
+    /* Smooth transition */
+}
+
+input {
+
+    font-size: 16px;
+    color: #000000;
+    height: 100%;
+    width: 100%;
+    padding: 0 15px;
+    border-radius: 20px;
+    background-color: #3c3c3c;
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+}
+
+input:focus {
+    background-color: #1f1f1f;
+    /* Darker background on focus */
+}
+
+/* Main section styles */
+#section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Card styles */
+.card {
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transitions */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    /* Enhanced shadow */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid #00bcd4;
+    /* Accent color */
+    transition: transform 0.3s ease;
+    /* Smooth image transition */
+}
+
+.card:hover img {
+    transform: scale(1.05);
+    /* Zoom effect */
+}
+
+/* Title styles */
+.title {
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #00bcd4;
+    /* Accent color */
+    font-weight: bold;
+    border-top: 5px solid #00bcd4;
+    /* Accent color border */
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .card {
+        width: 30%;
+    }
+}
+
+@media (max-width: 900px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+
+    .topnav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-container {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    form {
+        width: 100%;
+    }
+}

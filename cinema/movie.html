@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Movie Site</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="topnav">
+            <a class="active" href="index.html">Movies Site</a>
+        </div>
+        <h1>Reviews for:</h1>
+        <h3 id="title">Movie Title</h3>
+
+        <section id="section">
+            <!-- Movie cards will be injected here -->
+        </section>
+
+        <script src="movie.js"></script>
+        <script>
+            // JavaScript for scroll effect
+            const topnav = document.querySelector(".topnav");
+
+            function handleScroll() {
+                if (window.scrollY > 50) {
+                    topnav.classList.add("scrolled");
+                } else {
+                    topnav.classList.remove("scrolled");
+                }
+            }
+
+            window.addEventListener("scroll", handleScroll);
+            handleScroll(); // Initial check
+        </script>
+    </body>
+</html>
